@@ -6,3 +6,5 @@ qos-llm/models/*.gguf
 
 # Python virtual environment
 qos-llm/venv/
+DS_Store
+*/DS_Store*
