@@ -1,0 +1,8 @@
+# llama.cpp build + repo
+llama.cpp/
+
+# Large model files
+qos-llm/models/*.gguf
+
+# Python virtual environment
+qos-llm/venv/

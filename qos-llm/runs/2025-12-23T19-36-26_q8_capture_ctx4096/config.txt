@@ -1,0 +1,5 @@
+model=models/llama3.1-8b-instruct-q8_0.gguf
+ctx=4096
+gen_tokens=256
+prompt=/Users/vishnudevireddy/OsTelemetry/qos-llm/prompts/short.txt
+tag=q8_capture

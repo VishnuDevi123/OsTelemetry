@@ -1,0 +1,15 @@
+{
+  "run_dir": "/Users/vishnudevireddy/OsTelemetry/qos-llm/runs/2025-12-23T19-36-26_q8_capture_ctx4096",
+  "tag": "q8_capture",
+  "ctx": 4096,
+  "gen_tokens": 256,
+  "model_path": "models/llama3.1-8b-instruct-q8_0.gguf",
+  "prompt_tps": 15393.6,
+  "gen_tps": 16.4,
+  "metal_free_mib": 3378,
+  "metal_used_mib": 8908,
+  "metal_model_mib": 8137,
+  "metal_context_mib": 512,
+  "metal_compute_mib": 258,
+  "metal_unaccounted_mib": 1
+}

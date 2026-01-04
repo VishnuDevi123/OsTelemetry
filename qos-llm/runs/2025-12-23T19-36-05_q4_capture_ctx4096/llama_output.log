@@ -1,0 +1,56 @@
+^Dggml_metal_device_init: tensor API disabled for pre-M5 and pre-A19 devices
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_init: loaded in 0.018 sec
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   Apple M3 Pro
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple9  (1009)
+ggml_metal_device_init: GPU family: MTLGPUFamilyCommon3 (3003)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal3  (5001)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = false
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 12884.92 MB
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\ 
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b7501-0e1ccf15c
+model      : llama3.1-8b-instruct-q4_k_m.gguf
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read               add a text file
+
+[1m[32m
+> Explain what the KV cache is in transformers in 6 bullets. Keep it technical.
+[0m
+|-\ The KV cache is a data structure used in the transformer architecture to improve training efficiency and reduce memory requirements. Here's a technical breakdown in 6 bullets:
+
+* **Cache Type**: The KV cache is a caching mechanism used to store the attention scores of each query, key, and value (Q, K, V) pair for the entire sequence in a single matrix. This cache is used for the subsequent layers in a transformer decoder.
+* **Cache Size**: The size of the KV cache is typically set to the maximum sequence length (L) of the input. This is because the cache needs to store the attention scores for all possible query, key, and value pairs for each token in the sequence.
+* **Cache Organization**: The KV cache is organized as a matrix of size L x L, where each element at position (i, j) represents the attention score between the i-th token and the j-th token. This matrix is then stored in a cache buffer to reduce memory access latency.
+* **Cache Access Pattern**: When computing the attention scores for a given token, the transformer model uses the cached attention scores from the previous layer to compute the attention weights. This cache access pattern is designed to reduce the number of memory accesses and improve training efficiency.
+* **Cache Maintenance
+[35m
+[ Prompt: 16312.7 t/s | Generation: 26.6 t/s ]
+[0m
+Exiting...
+llama_memory_breakdown_print: | memory breakdown [MiB]   | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Metal (Apple M3 Pro) | 12288 = 6830 + (5455 =  4685 +     512 +     258) +           1 |
+llama_memory_breakdown_print: |   - Host                 |                  297 =   281 +       0 +      16                |
+ggml_metal_free: deallocating

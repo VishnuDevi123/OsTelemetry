@@ -1,0 +1,21 @@
+{
+  "run_dir": "/Users/vishnudevireddy/OsTelemetry/qos-llm/runs/2025-12-23T19-36-05_q4_capture_ctx4096",
+  "tag": "q4_capture",
+  "ctx": 4096,
+  "gen_tokens": 256,
+  "model_path": "models/llama3.1-8b-instruct-q4_k_m.gguf",
+  "prompt_tps": 16312.7,
+  "gen_tps": 26.6,
+  "metal_free_mib": 6830,
+  "metal_used_mib": 5455,
+  "metal_model_mib": 4685,
+  "metal_context_mib": 512,
+  "metal_compute_mib": 258,
+  "metal_unaccounted_mib": 1,
+  "rss_peak_mb": 634.5,
+  "rss_mean_mb": 612.9368965517241,
+  "cpu_mean_pct": 9.548275862068966,
+  "pageins_final": 302690.0,
+  "pageouts_final": 30.0,
+  "duration_s": 15.254950284957886
+}

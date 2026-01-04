@@ -1,0 +1,64 @@
+^Dggml_metal_device_init: tensor API disabled for pre-M5 and pre-A19 devices
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_init: loaded in 0.008 sec
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   Apple M3 Pro
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple9  (1009)
+ggml_metal_device_init: GPU family: MTLGPUFamilyCommon3 (3003)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal3  (5001)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = false
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 12884.92 MB
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b7501-0e1ccf15c
+model      : llama3.1-8b-instruct-q8_0.gguf
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read               add a text file
+
+[1m[32m
+> Explain what the KV cache is in transformers in 6 bullets. Keep it technical.
+[0m
+|-\ Here's a technical explanation of the KV cache in the transformers library in 6 bullets:
+
+* **KV Cache Structure**: The KV cache in transformers is a key-value (KV) cache, also known as a dictionary or hashmap. It stores cached values associated with specific keys, allowing for efficient retrieval and updates of cached results.
+
+* **Cache Keys**: In the transformers library, cache keys are typically tuples containing the input tokens, attention mask, and other relevant metadata. These keys uniquely identify specific computation results and enable the cache to store and retrieve results for similar inputs efficiently.
+
+* **Cache Values**: Cache values in the transformers library are the actual computation results, such as attention weights, output embeddings, or other intermediate results. These values are stored in the cache to avoid redundant computations and improve performance.
+
+* **Cache Operations**: The transformers library provides several cache operations, including:
+	+ `cache`: Stores a computation result in the cache with a given key.
+	+ `has`: Checks if a key is present in the cache.
+	+ `get`: Retrieves a cached value associated with a given key.
+	+ `clear`: Clears the cache and removes all stored values.
+
+* **Cache Hierarchy**: In the transformers library, the cache is organized in a hierarchical structure, with
+[35m
+[ Prompt: 15393.6 t/s | Generation: 16.4 t/s ]
+[0m
+Exiting...
+llama_memory_breakdown_print: | memory breakdown [MiB]   | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Metal (Apple M3 Pro) | 12288 = 3378 + (8908 =  8137 +     512 +     258) +           1 |
+llama_memory_breakdown_print: |   - Host                 |                  548 =   532 +       0 +      16                |
+ggml_metal_free: deallocating
